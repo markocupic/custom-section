@@ -1,0 +1,62 @@
+<!-- indexer::stop -->
+<div class="mod_footer">
+    <div class="row first-row">
+
+        <div class="col-lg-3 footer-contact-box">
+            <h2>Kontakt</h2>
+            Pr&auml;sident RSZ:<br>
+            Matthias Gubser<br>
+            Oberm&uuml;hle 10<br>
+            6340 Baar<br>
+            <i class="fa fa-envelope-o fa-fw"></i> {{email::matthias.gubser@gmail.com}}<br>
+            <i class="fa fa-phone fa-fw"></i> +41 79 623 98 27
+        </div>
+        <div class="col-lg-3 footer-search-box">
+            <h2>Suche</h2>
+            {{insert_module::151}}
+        </div>
+
+        <div class="col-lg-3 footer-random-galleries-box">
+            <h2>Galerien</h2>
+            {{insert_module::170}}
+        </div>
+
+        <div class="col-lg-3 footer-supporter-logos">
+            <div class="row">
+                <div class="col-xs-6 col-lg-12">
+                    <div class="item">
+                        <a href="http://www.sport.lu.ch/index/swisslos.htm" target="_blank"><img alt="Logo SAC" title="Schweizerischer Alpenclub SAC" src="files/theme-files/logos/sl_lu_wappen1_klein-4.jpg"></a>
+                    </div>
+                </div>
+                <div class="col-xs-6 col-lg-12">
+                    <div class="item">
+                        <a href="http://www.sac-cas.ch" target="_blank"><img alt="Logo SAC" title="Schweizerischer Alpenclub SAC" src="files/theme-files/logos/sac_logo.jpg"></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="row second-row">
+        <div class="col-xs-6 footer-copyright-box">
+            <div>
+                Copyright &copy; <?= \Date::parse('Y') ?>
+            </div>
+        </div>
+
+        <div class="col-xs-6">
+            <div class="custom-navigation-footer">
+                <!-- here comes the custom footer navigation -->
+                {{insert_module::72}}
+            </div>
+        </div>
+
+        <div class="col-xs-12">
+            <div>
+                Konzeption: <a href="portrait?uid=54">Marko Cupic</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+        <!-- indexer::continue -->

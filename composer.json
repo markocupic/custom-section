@@ -1,0 +1,48 @@
+{
+  "name": "markocupic/custom-section",
+  "description": "Contao frontend module. Insert Content via template.",
+  "keywords": [
+    "contao",
+    "frontend",
+    "module",
+    "template",
+    "content"
+  ],
+  "type": "contao-module",
+  "license": "LGPL-3.0+",
+  "authors": [
+    {
+      "name": "Marko Cupic",
+      "email": "m.cupic@gmx.ch",
+      "homepage": "https://github.com/markocupic",
+      "role": "Developer"
+    }
+  ],
+  "support": {
+    "issues": "https://github.com/markocupic/custom-section/issues",
+    "source": "https://github.com/markocupic/custom-section"
+  },
+  "require": {
+    "php": ">=5.3",
+    "contao/core": ">=3.2,<4",
+    "contao-community-alliance/composer-plugin": "*",
+    "pclzip/pclzip": "~2"
+  },
+  "replace": {
+  },
+  "conflict": {
+    "contao/core": "3.0.*"
+  },
+  "autoload": {
+    "classmap": [
+      ""
+    ]
+  },
+  "extra": {
+    "contao": {
+      "sources": {
+        "": "system/modules/custom-section"
+      }
+    }
+  }
+}
