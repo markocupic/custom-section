@@ -33,5 +33,8 @@ ClassLoader::addClasses(array
  */
 TemplateLoader::addFiles(array
 (
-	'mod_custom_footer' => 'system/modules/custom-section/templates',
+	'mod_custom_section' => 'system/modules/custom-section/templates',
+	'mod_custom_section_footer_first_row' => 'system/modules/custom-section/templates',
+	'mod_custom_section_footer_second_row' => 'system/modules/custom-section/templates',
+	'mod_custom_section_header' => 'system/modules/custom-section/templates'
 ));
