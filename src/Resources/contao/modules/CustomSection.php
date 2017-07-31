@@ -8,7 +8,7 @@
  * @license LGPL-3.0+
  */
 
-namespace CustomSection;
+namespace Markocupic\CustomSection;
 
 use Patchwork\Utf8;
 
