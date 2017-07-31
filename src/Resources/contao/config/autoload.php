@@ -14,7 +14,7 @@
  */
 ClassLoader::addNamespaces(array
 (
-	'Markocupic',
+	'CustomSection',
 ));
 
 
@@ -24,7 +24,7 @@ ClassLoader::addNamespaces(array
 ClassLoader::addClasses(array
 (
 	// Modules
-	'Markocupic\CustomSection' => 'system/modules/custom-section/modules/CustomSection.php',
+	'CustomSection\CustomSection' => 'system/modules/custom-section/modules/CustomSection.php',
 ));
 
 
