@@ -52,7 +52,7 @@
         "src/Resources/contao/config": "system/modules/custom-section/config",
         "src/Resources/contao/dca": "system/modules/custom-section/dca",
         "src/Resources/contao/languages": "system/modules/custom-section/languages",
-        "src/Resources/contao/elements": "system/modules/custom-section/modules",
+        "src/Resources/contao/modules": "system/modules/custom-section/modules",
         "src/Resources/contao/templates": "system/modules/custom-section/templates"
       }
     }
