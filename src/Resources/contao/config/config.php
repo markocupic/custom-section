@@ -15,7 +15,7 @@ array_insert
 	(
 		'layout' => array
 		(
-			'custom_section' => 'Markocupic\CustomSection\CustomSection'
+			'custom_section' => 'CustomSection\CustomSection'
 		)
 	)	
 );
