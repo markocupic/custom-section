@@ -23,10 +23,7 @@
     "source": "https://github.com/markocupic/custom-section"
   },
   "require": {
-    "php": ">=5.3",
-    "contao/core": ">=3.2,<4",
-    "contao-community-alliance/composer-plugin": "*",
-    "pclzip/pclzip": "~2"
+    "php": ">=5.3"
   },
   "replace": {
   },
