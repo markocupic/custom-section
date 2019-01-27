@@ -9,7 +9,7 @@
     "content"
   ],
   "type": "contao-module",
-  "license": "LGPL-3.0+",
+  "license": "MIT",
   "authors": [
     {
       "name": "Marko Cupic",
@@ -23,8 +23,7 @@
     "source": "https://github.com/markocupic/custom-section"
   },
   "require": {
-    "contao/core-bundle":"~3.2 || ~4.4",
-    "contao-community-alliance/composer-plugin":"~2.4 || ~3.0"
+    "contao/core-bundle":"~3.2 || ~4.4"
   },
   "replace": {
   },
