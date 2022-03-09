@@ -10,13 +10,6 @@
 
 namespace Markocupic\CustomSection;
 
-use Patchwork\Utf8;
-
-/**
- * Front end Custom Footer.
- *
- * @author Marko Cupic <m.cupic@gmx.ch>
- */
 class CustomSection extends \Module
 {
 
@@ -39,7 +32,7 @@ class CustomSection extends \Module
             {
                 $objTemplate->wildcard = '### ' . utf8_strtoupper($GLOBALS['TL_LANG']['FMD']['custom_section'][0]) . ' ###';
             }else{
-                $objTemplate->wildcard = '### ' . Utf8::strtoupper($GLOBALS['TL_LANG']['FMD']['custom_section'][0]) . ' ###';
+                $objTemplate->wildcard = '### ' . $GLOBALS['TL_LANG']['FMD']['custom_section'][0] . ' ###';
             }
             $objTemplate->title = $this->headline;
             $objTemplate->id = $this->id;
