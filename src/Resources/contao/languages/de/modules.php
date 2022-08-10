@@ -17,9 +17,9 @@ use Markocupic\CustomSection\Controller\FrontendModule\CustomSectionController;
 /*
  * Frontend module category
  */
-$GLOBALS['TL_LANG']['FMD']['layout'] = ['Layout modules'];
+$GLOBALS['TL_LANG']['FMD']['layout'] = ['Layout-Module'];
 
 /*
  * Frontend modules
  */
-$GLOBALS['TL_LANG']['FMD'][CustomSectionController::TYPE] = ['Custom section module - custom template', 'Add content to your layout using a template.'];
+$GLOBALS['TL_LANG']['FMD'][CustomSectionController::TYPE] = ['Custom Inhaltsbereich Modul - Custom Template', 'Einen Inhaltsbereich über ein Template selber gestalten/layouten.'];

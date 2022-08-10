@@ -14,7 +14,7 @@
     {
       "name": "Marko Cupic",
       "email": "m.cupic@gmx.ch",
-      "homepage": "https://github.com/markocupic",
+      "homepage": "https://github.com/markocupic/custom_section",
       "role": "Developer"
     }
   ],
@@ -23,37 +23,23 @@
     "source": "https://github.com/markocupic/custom-section"
   },
   "require": {
-    "contao/core-bundle":"~3.2 || ~4.4"
+    "php": "^8.1",
+    "contao/core-bundle": "^4.13|^5.0"
   },
-  "replace": {
-  },
-  "conflict": {
-    "contao/core": "3.0.*"
+  "require-dev": {
+    "contao/manager-plugin": "^2.3.1",
+    "contao/test-case": "^4.5",
+    "phpunit/phpunit": "^9.3",
+    "symfony/http-client": "5.4.*",
+    "symfony/phpunit-bridge": "^5.4",
+    "contao/easy-coding-standard": "^3.0"
   },
   "autoload": {
     "psr-4": {
-      "Markocupic\\CustomSection\\": "src/"
-    },
-    "classmap": [
-      "src/Resources/contao"
-    ],
-    "exclude-from-classmap": [
-      "src/Resources/contao/config",
-      "src/Resources/contao/dca",
-      "src/Resources/contao/languages",
-      "src/Resources/contao/templates"
-    ]
+      "Markocupic\\BootstrapResponsiveYoutubeEmbed\\": "src/"
+    }
   },
   "extra": {
-    "contao-manager-plugin": "Markocupic\\CustomSection\\ContaoManager\\Plugin",
-    "contao": {
-      "sources": {
-        "src/Resources/contao/config": "system/modules/custom-section/config",
-        "src/Resources/contao/dca": "system/modules/custom-section/dca",
-        "src/Resources/contao/languages": "system/modules/custom-section/languages",
-        "src/Resources/contao/modules": "system/modules/custom-section/modules",
-        "src/Resources/contao/templates": "system/modules/custom-section/templates"
-      }
-    }
+    "contao-manager-plugin": "Markocupic\\CustomSection\\ContaoManager\\Plugin"
   }
 }
