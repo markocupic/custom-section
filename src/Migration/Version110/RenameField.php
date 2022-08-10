@@ -72,7 +72,6 @@ class RenameField extends AbstractMigration
             'SELECT * FROM tl_module WHERE type = ? AND customSectionTpl != customTpl',
             [
                 'custom_section',
-                '',
             ],
         );
 
