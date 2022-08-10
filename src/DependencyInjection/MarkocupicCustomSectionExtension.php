@@ -12,7 +12,7 @@ declare(strict_types=1);
  * @link https://github.com/markocupic/custom-section
  */
 
-namespace Markocupic\CustomSectionExtension\DependencyInjection;
+namespace Markocupic\CustomSection\DependencyInjection;
 
 use Symfony\Component\Config\FileLocator;
 use Symfony\Component\DependencyInjection\ContainerBuilder;
