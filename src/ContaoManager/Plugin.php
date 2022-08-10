@@ -22,10 +22,7 @@ use Markocupic\CustomSection\MarkocupicCustomSection;
 
 class Plugin implements BundlePluginInterface
 {
-    /**
-     * {@inheritdoc}
-     */
-    public function getBundles(ParserInterface $parser)
+    public function getBundles(ParserInterface $parser): array
     {
         return [
             BundleConfig::create(MarkocupicCustomSection::class)

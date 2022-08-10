@@ -1,6 +1,6 @@
 {
   "name": "markocupic/custom-section",
-  "description": "Contao frontend module. Insert Content via template.",
+  "description": "Contao frontend module. Add content to your layout via a template.",
   "keywords": [
     "contao",
     "frontend",
@@ -8,13 +8,13 @@
     "template",
     "content"
   ],
-  "type": "contao-module",
+  "type": "contao-bundle",
   "license": "MIT",
   "authors": [
     {
       "name": "Marko Cupic",
       "email": "m.cupic@gmx.ch",
-      "homepage": "https://github.com/markocupic/custom_section",
+      "homepage": "https://github.com/markocupic/custom-section",
       "role": "Developer"
     }
   ],
@@ -36,7 +36,7 @@
   },
   "autoload": {
     "psr-4": {
-      "Markocupic\\BootstrapResponsiveYoutubeEmbed\\": "src/"
+      "Markocupic\\CustomSection\\": "src/"
     }
   },
   "extra": {
