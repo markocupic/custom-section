@@ -3,10 +3,9 @@
   "description": "Contao frontend module. Add content to your layout via a template.",
   "keywords": [
     "contao",
-    "frontend",
-    "module",
     "template",
-    "content"
+    "module",
+    "custom"
   ],
   "type": "contao-bundle",
   "license": "MIT",
@@ -14,7 +13,7 @@
     {
       "name": "Marko Cupic",
       "email": "m.cupic@gmx.ch",
-      "homepage": "https://github.com/markocupic/custom-section",
+      "homepage": "https://github.com/markocupic",
       "role": "Developer"
     }
   ],
@@ -32,7 +31,7 @@
     "phpunit/phpunit": "^9.3",
     "symfony/http-client": "5.4.*",
     "symfony/phpunit-bridge": "^5.4",
-    "contao/easy-coding-standard": "^3.0"
+    "contao/easy-coding-standard": "^5.0"
   },
   "autoload": {
     "psr-4": {
