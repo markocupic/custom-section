@@ -17,6 +17,7 @@ namespace Markocupic\CustomSection\Controller\FrontendModule;
 use Contao\CoreBundle\Controller\FrontendModule\AbstractFrontendModuleController;
 use Contao\CoreBundle\DependencyInjection\Attribute\AsFrontendModule;
 use Contao\ModuleModel;
+use Contao\StringUtil;
 use Contao\Template;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
@@ -28,6 +29,16 @@ class CustomSectionController extends AbstractFrontendModuleController
 
     protected function getResponse(Template $template, ModuleModel $model, Request $request): Response
     {
+        $this->initializeContaoFramework();
+
+        $arrData = [];
+
+        foreach (StringUtil::deserialize($model->data, true) as $arrKeyValue) {
+            $arrData[$arrKeyValue['key']] = $arrKeyValue['value'];
+        }
+
+        $template->data = $arrData;
+
         return $template->getResponse();
     }
 }
