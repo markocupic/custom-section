@@ -19,6 +19,11 @@ use Symfony\Component\HttpKernel\Bundle\Bundle;
 
 class MarkocupicCustomSection extends Bundle
 {
+    public function getPath(): string
+    {
+        return \dirname(__DIR__);
+    }
+
     /**
      * {@inheritdoc}
      */
