@@ -53,14 +53,13 @@ class RenameField extends AbstractMigration
             return false;
         }
 
-        $result = $this->connection->fetchOne(
-            'SELECT id FROM tl_module WHERE type = ? AND customSectionTpl != customTpl',
-            [
-                'custom_section',
-            ],
-        );
+        $result = $this->connection->fetchOne('SELECT * FROM tl_module WHERE customsectiontpl != customtpl');
 
-        return false !== $result;
+        if ($result) {
+            return true;
+        }
+
+        return false;
     }
 
     /**
@@ -68,21 +67,23 @@ class RenameField extends AbstractMigration
      */
     public function run(): MigrationResult
     {
-        $result = $this->connection->executeQuery(
-            'SELECT * FROM tl_module WHERE type = ? AND customSectionTpl != customTpl',
-            [
-                'custom_section',
-            ],
-        );
+        $result = $this->connection->executeQuery('SELECT id, customsectiontpl FROM tl_module WHERE customsectiontpl != customtpl');
 
-        while (false !== ($row = $result->fetchAssociative())) {
-            $set = [
-                'customTpl' => $row['customSectionTpl'],
-            ];
+        if ($result) {
+            $rows = $result->fetchAllAssociative();
 
-            $this->connection->update('tl_module', $set, ['id' => $row['id']]);
+            foreach ($rows as $row) {
+                $set = [
+                    'customtpl' => $row['customsectiontpl'],
+                ];
+
+                $this->connection->update('tl_module', $set, ['id' => $row['id']]);
+            }
         }
 
-        return $this->createResult(true);
+        return new MigrationResult(
+            true,
+            $this->getName()
+        );
     }
 }
