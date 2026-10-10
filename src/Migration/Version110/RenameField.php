@@ -24,11 +24,8 @@ use Doctrine\DBAL\Exception;
  */
 class RenameField extends AbstractMigration
 {
-    private Connection $connection;
-
-    public function __construct(Connection $connection)
+    public function __construct(private readonly Connection $connection)
     {
-        $this->connection = $connection;
     }
 
     public function getName(): string
@@ -83,7 +80,7 @@ class RenameField extends AbstractMigration
 
         return new MigrationResult(
             true,
-            $this->getName()
+            $this->getName(),
         );
     }
 }

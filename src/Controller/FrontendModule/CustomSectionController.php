@@ -16,9 +16,9 @@ namespace Markocupic\CustomSection\Controller\FrontendModule;
 
 use Contao\CoreBundle\Controller\FrontendModule\AbstractFrontendModuleController;
 use Contao\CoreBundle\DependencyInjection\Attribute\AsFrontendModule;
+use Contao\CoreBundle\Twig\FragmentTemplate;
 use Contao\ModuleModel;
 use Contao\StringUtil;
-use Contao\Template;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
 
@@ -27,17 +27,27 @@ class CustomSectionController extends AbstractFrontendModuleController
 {
     public const TYPE = 'custom_section';
 
-    protected function getResponse(Template $template, ModuleModel $model, Request $request): Response
+    /**
+     * Converts the serialized key-value rows of the "data" field into an associative array.
+     */
+    public static function getKeyValueData(mixed $data): array
     {
-        $this->initializeContaoFramework();
-
         $arrData = [];
 
-        foreach (StringUtil::deserialize($model->data, true) as $arrKeyValue) {
-            $arrData[$arrKeyValue['key']] = $arrKeyValue['value'];
+        foreach (StringUtil::deserialize($data, true) as $row) {
+            if (!\is_array($row) || !isset($row['key']) || '' === (string) $row['key']) {
+                continue;
+            }
+
+            $arrData[(string) $row['key']] = $row['value'] ?? '';
         }
 
-        $template->data = $arrData;
+        return $arrData;
+    }
+
+    protected function getResponse(FragmentTemplate $template, ModuleModel $model, Request $request): Response
+    {
+        $template->set('data', self::getKeyValueData($model->data));
 
         return $template->getResponse();
     }
